@@ -28,3 +28,12 @@ const tokenAccount = await getOrCreateAssociatedTokenAccount(
     recipient
 );
 
+console.log(`Token Account: ${tokenAccount.address.toBase58()}`);
+
+const link = getExplorerLink(
+    "address",
+    tokenAccount.address.toBase58(),
+    "devnet"
+  );
+  
+console.log(`✅ Created token Account: ${link}`);
